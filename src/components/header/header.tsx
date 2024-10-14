@@ -1,0 +1,26 @@
+import { useState, ChangeEvent, MouseEvent } from "react"
+import styles from './header.module.css';
+import { useAppDispatch } from "../../hook";
+import { addTodo } from "../../store/todoSlice";
+
+export const Header: React.FC = () => {
+
+    const [value, setValue] = useState('');
+
+    const dispatch = useAppDispatch();
+
+
+    const onClickHandler = (event: MouseEvent<HTMLButtonElement>) => {
+        dispatch(addTodo(value));
+        setValue('');
+    }
+
+    const onChangeHandler = (event: ChangeEvent<HTMLInputElement>) => setValue(event.target.value);
+
+    return (
+        <div className={styles.header}>
+            <input className="todoInput" placeholder="Введите новую задачу"  value={value} onChange={onChangeHandler} />
+            <button type="button" onClick={onClickHandler} >Добавить</button>
+        </div>
+    )
+}
