@@ -1,0 +1,13 @@
+.main {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+    
+}
+
+.main .title {
+    text-transform: uppercase;
+    font-family: "Quicksand", serif;
+    font-size: 2rem;
+    color: #e9d9d8;
+}

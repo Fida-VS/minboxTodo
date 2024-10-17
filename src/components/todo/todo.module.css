@@ -1,0 +1,32 @@
+.todo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45px;
+    margin-bottom: 1.4rem;
+    width: 70%;
+    padding: 2rem;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.1);
+    background-color: #fff;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+
+.todo .deleteButton {
+    position: absolute;
+    font-size: 1.8rem;
+    cursor: pointer;
+    left: 90%;
+    /* color: #d6001c; */
+    color: #e9d9d8;
+} 
+
+
+.todo div {
+    cursor: pointer;
+}
+
+
+

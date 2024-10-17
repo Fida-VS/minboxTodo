@@ -19,6 +19,9 @@ useEffect(() => {
 
     return (
         <div className={styles.main}>
+            <div className={styles.title}>
+                <h3>To-Do List</h3>
+            </div>
             <Header />
             {status && <h2>Loading...</h2>}
             {error && <h2>An error occured: {error}</h2>}

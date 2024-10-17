@@ -14,9 +14,11 @@ export const Todo: React.FC<TodoProps> = ({id, title, completed}) => {
 
     return (
         <div className={styles.todo}>
-            <input type='checkbox' checked={completed} onChange={() => dispatch(toggleStatus(id))} />
+            
+            <div className={`task ${completed ? 'completedTask' : ''}`}  onClick={() => dispatch(toggleStatus(id))}>
             <span>{title}</span>
-            <button type='button' onClick={() => dispatch(deleteTodo(id))}>Удалить</button>
+            </div>
+            <div className={styles.deleteButton} onClick={() => dispatch(deleteTodo(id))}>✖</div>
         </div>
     )
 }

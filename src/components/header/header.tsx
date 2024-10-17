@@ -21,8 +21,8 @@ export const Header: React.FC = () => {
 
     return (
         <div className={styles.header}>
-            <input className="todoInput" placeholder="Введите новую задачу"  value={value} onChange={onChangeHandler} />
-            <button type="button" onClick={onClickHandler} >Добавить</button>
+            <input className="todoInput" placeholder="Add a new task..."  value={value} onChange={onChangeHandler} />
+            <button type="button" onClick={onClickHandler} >Add</button>
         </div>
     )
 }

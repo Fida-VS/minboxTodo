@@ -22,7 +22,7 @@ export const ControlPanel: React.FC = () => {
     return (
         <div className={styles.controlPanel}>
 
-            <div className={styles.controlPanel__todosCount}>
+            {/* <div className={styles.controlPanel__todosCount}>
                 <div>{activeTodosCount} items left</div>
             </div>
 
@@ -30,7 +30,9 @@ export const ControlPanel: React.FC = () => {
             <button type='button' onClick={() => dispatch(changeFilter('all'))}>All</button>
             <button type='button' onClick={() => dispatch(changeFilter('active'))}>Active</button>
             <button type='button' onClick={() => dispatch(changeFilter('completed'))}>Completed</button>
-            </div>
+            </div> */}
+
+            <div>{activeTodosCount}</div>
             
         </div>
     )
