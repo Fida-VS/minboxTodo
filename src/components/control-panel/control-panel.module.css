@@ -1,15 +1,27 @@
-.controlPanel {
-   width: 50px;
-   height: 50px;
-   
-   border-radius: 50%;
-   margin-left: 90%;
-   margin-top: -10%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   font-size: 1.5rem;
-   background-color: #d6001c;
-   color: #e9d9d8;
-   font-weight: bold;
+.controlPanel__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  margin-left: 13px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 17px solid #e9d9d8;
+}
+
+.controlPanel__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9d9d8;
+  z-index: 500;
+  width: 100%;
+}
+
+.controlPanel__buttons div {
+padding-bottom: 10px;
 }

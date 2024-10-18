@@ -19,8 +19,11 @@
     font-size: 1.8rem;
     cursor: pointer;
     left: 90%;
-    /* color: #d6001c; */
     color: #e9d9d8;
+} 
+
+.todo .deleteButton:hover {
+    color: #d6001c;
 } 
 
 
