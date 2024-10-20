@@ -4,23 +4,6 @@
   justify-content: center;
 }
 
-.arrow {
-  margin-left: 13px;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 17px solid #e9d9d8;
-}
-
-.controlPanel__buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-bottom: 1px solid #e9d9d8;
-  z-index: 500;
-  width: 100%;
-}
 
 .controlPanel__buttons div {
 padding-bottom: 10px;

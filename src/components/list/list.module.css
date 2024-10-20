@@ -7,3 +7,16 @@ flex-direction: column;
 justify-content: space-between;
 align-items: center;
 }
+
+.noTodos {
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+
+@media screen
+and (max-width : 768px) 
+{
+ .list {
+     width: 95%;
+ }
+}

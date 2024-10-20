@@ -38,5 +38,5 @@ export const List: React.FC = () => {
                 />
             ))}
         </div>
-    ) : (<div>Дел нет, ура!</div>)
+    ) : (<div className={styles.noTodos}>Дел нет, ура!</div>)
 }

@@ -40,8 +40,8 @@ code {
 }
 
 .wrapper {
-  min-width: 50px;
-  min-height: 50px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -50,7 +50,6 @@ code {
   background-color: #d6001c;
   color: #e9d9d8;
   font-weight: bold;
-  
 }
 
 .miniPlate {
@@ -68,3 +67,36 @@ code {
 .plate div {
   cursor: pointer;
 }
+
+.arrow {
+  margin-left: 13px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 17px solid #e9d9d8;
+  
+}
+
+.arrowTransform {
+  transform: rotate(180deg);
+}
+
+.controlPanel__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9d9d8;
+  z-index: 500;
+  width: 100%;
+  font-style: italic;
+  color: rgb(233, 217, 216, 0.7);
+}
+
+.controlPanel .wrapper .controlPanel__buttons .active {
+  font-style: normal;
+  color: rgb(233, 217, 216);
+}
+
+
+  

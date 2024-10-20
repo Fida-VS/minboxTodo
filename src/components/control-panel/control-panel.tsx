@@ -14,6 +14,9 @@ export const ControlPanel: React.FC = () => {
     const [countString, setCountString] = useState('');
     const [plate, setPlate] = useState(false);
     const [miniPlate, setMiniPlate] = useState(false);
+    const [isButtonAllActive, setIsButtonAllActive] = useState(true);
+    const [isButtonActiveActive, setIsButtonActiveActive] = useState(false);
+    const [isButtonCompletedActive, setIsButtonCompletedActive] = useState(false);
 
     const dispatch = useAppDispatch();
 
@@ -34,6 +37,34 @@ export const ControlPanel: React.FC = () => {
         setPlate(!plate);
     };
 
+    const onClickHandler = (buttonName: string) => {
+        
+        dispatch(changeFilter(buttonName));
+
+        switch(buttonName) {
+            case 'all':  
+            setIsButtonAllActive(true);
+            setIsButtonActiveActive(false);
+            setIsButtonCompletedActive(false);
+              break;
+          
+            case 'active':  
+            setIsButtonActiveActive(true);
+            setIsButtonAllActive(false);
+            setIsButtonCompletedActive(false);
+              break;
+
+              case 'completed':  
+              setIsButtonCompletedActive(true);
+              setIsButtonAllActive(false);
+              setIsButtonActiveActive(false);
+              break;
+          
+            default:
+             return;
+          }
+    };
+
     const getActiveTodosCounter = (todos: Todo[]) => {
       return todos.filter(todo => todo.completed === false).length;
     };
@@ -45,15 +76,15 @@ export const ControlPanel: React.FC = () => {
 
             <div className={`wrapper ${miniPlate ? 'miniPlate' : ''} ${plate ? 'plate' : ''}`}>
 
-            {plate && <div className={styles.controlPanel__buttons}>
-            <div onClick={() => dispatch(changeFilter('all'))}>All</div>
-            <div onClick={() => dispatch(changeFilter('active'))}>Active</div>
-            <div onClick={() => dispatch(changeFilter('completed'))}>Completed</div>
+            {plate && <div className='controlPanel__buttons'>
+            <div className={` ${isButtonAllActive ? 'active' : ''}`}  onClick={() => onClickHandler('all')}>All</div>
+            <div className={` ${isButtonActiveActive ? 'active' : ''}`} onClick={() => onClickHandler('active')}>Active</div>
+            <div className={` ${isButtonCompletedActive ? 'active' : ''}`} onClick={() => onClickHandler('completed')}>Completed</div>
             </div>}    
 
         <div className={styles.controlPanel__text} onClick={togglePlate}>
             <div>{activeTodosCount + countString}</div>
-            {(countString === ' items left') && <div className={styles.arrow}></div>}
+            {(countString === ' items left') && <div className={`arrow ${plate ? 'arrowTransform' : ''}`}></div>}
             </div>
             </div>
         </div>

@@ -5,6 +5,7 @@ import { List } from '../../components/list/list';
 import styles from './main.module.css';
 import { useAppDispatch, useAppSelector } from '../../hook';
 import { fetchTodos } from '../../store/todoSlice';
+import { Loader } from '../../components/loader/loader';
 
 
 export const Main: React.FC = () => {
@@ -23,8 +24,8 @@ useEffect(() => {
                 <h3>To-Do List</h3>
             </div>
             <Header />
-            {status && <h2>Loading...</h2>}
-            {error && <h2>An error occured: {error}</h2>}
+            {status && <Loader />}
+            {error && <div className={styles.error}>An error occured: {error}</div>}
             <List />
             <ControlPanel />
         </div>
