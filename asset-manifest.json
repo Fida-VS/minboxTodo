@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/minboxTodo/static/css/main.69aa6448.css",
+    "main.js": "/minboxTodo/static/js/main.d82450e2.js",
+    "static/js/453.ed3810f9.chunk.js": "/minboxTodo/static/js/453.ed3810f9.chunk.js",
+    "index.html": "/minboxTodo/index.html",
+    "main.69aa6448.css.map": "/minboxTodo/static/css/main.69aa6448.css.map",
+    "main.d82450e2.js.map": "/minboxTodo/static/js/main.d82450e2.js.map",
+    "453.ed3810f9.chunk.js.map": "/minboxTodo/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.69aa6448.css",
+    "static/js/main.d82450e2.js"
+  ]
+}
