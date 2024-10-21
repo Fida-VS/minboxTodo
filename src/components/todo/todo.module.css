@@ -31,5 +31,32 @@
     cursor: pointer;
 }
 
+@media screen and (max-width : 1200px) 
+   {
+    .todo {
+        font-size: 1rem;
+  }
+   }
 
+   @media screen
+   and (max-width : 768px) 
+   {
+    .todo {
+        font-size: 1rem;
+    }
+   }
 
+   @media screen
+   and (max-width : 576px) 
+   {
+    .todo {
+        font-size: 0.7rem;
+        padding: 1rem;
+        line-height: 1rem;
+    }
+
+    .todo .deleteButton {
+        font-size: 1.5rem;
+        left: 86%;
+    } 
+   }

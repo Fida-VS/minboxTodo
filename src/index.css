@@ -98,5 +98,19 @@ code {
   color: rgb(233, 217, 216);
 }
 
+@media screen
+   and (max-width : 576px) 
+   {
+    .task {
+        padding-right: 0.5rem;
+    }
 
+    .controlPanel {
+      position: relative;
+      left: 20%;
+      margin-top: -5%;
+      margin-bottom: 3%;
+    }
+
+   }
   

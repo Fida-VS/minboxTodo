@@ -30,6 +30,15 @@
    and (max-width : 768px) 
    {
     .main {
-        width: 95%;
+        width: 98%;
     }
+   }
+
+   
+   @media screen
+   and (max-width : 576px) 
+   {
+   .main {
+    width: 99%;
+   }
    }

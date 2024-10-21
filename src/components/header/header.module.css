@@ -27,3 +27,13 @@
     border: none;
     cursor: pointer;
 }
+
+
+@media screen
+   and (max-width : 576px) 
+   {
+    .header {
+        width: 80%;
+    }
+
+   }
